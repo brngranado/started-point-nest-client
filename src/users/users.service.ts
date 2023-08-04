@@ -25,4 +25,8 @@ export class UsersService {
   async sendToMicroservice(data: DataSend) {
     return firstValueFrom(this.client.send('users_event', data));
   }
+
+  async findAllUsersMicroservice() {
+    return firstValueFrom(this.client.send('find_users', {}));
+  }
 }

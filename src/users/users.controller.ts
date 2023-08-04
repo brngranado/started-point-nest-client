@@ -18,6 +18,11 @@ import { RefreshTokenDto } from './dto/refresh-token.dto';
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
+  @Get()
+  async findAll() {
+    return await this.usersService.findAllUsersMicroservice();
+  }
+
   @Get('send-to-microservice')
   async sendRabbitMQ() {
     const param = {
@@ -27,7 +32,6 @@ export class UsersController {
     const data = await this.usersService.sendToMicroservice(param);
     return data;
   }
-
 
   @Post('login')
   async login(@Body() loginDto: LoginDto) {
