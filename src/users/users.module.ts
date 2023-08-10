@@ -14,7 +14,11 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
           queueOptions: {
             durable: false,
           },
+          headers: {
+            Authorization: 'Bearer 12312312312312328nkdjashdlasudklasjdklh' 
+          }
         },
+        
       },
     ]),
   ],
