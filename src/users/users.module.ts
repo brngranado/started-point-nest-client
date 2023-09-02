@@ -1,7 +1,8 @@
-import { Module } from '@nestjs/common';
-import { UsersService } from './users.service';
+import { Module, ExecutionContext, Req } from '@nestjs/common';
 import { UsersController } from './users.controller';
-import { ClientsModule, Transport } from '@nestjs/microservices';
+import { ClientProxy, ClientsModule, Transport } from '@nestjs/microservices';
+
+
 @Module({
   imports: [
     ClientsModule.register([
@@ -15,7 +16,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
             durable: false,
           },
           headers: {
-            Authorization: 'Bearer 12312312312312328nkdjashdlasudklasjdklh' 
+            Authorization: ""
           }
         },
         
@@ -23,6 +24,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
     ]),
   ],
   controllers: [UsersController],
-  providers: [UsersService],
+  providers: [],
 })
+
 export class UsersModule {}
