@@ -18,9 +18,7 @@ import { firstValueFrom } from 'rxjs';
 @Controller('api/users')
 @Injectable()
 export class UsersController {
- 
   constructor(@Inject('USERS_SERVICE') private client: ClientProxy) { }
-
   @Get()
   async findAll(@Req() request) {
      const authHeader = request.headers['authorization'];
