@@ -15,6 +15,10 @@ export class AuthenticationController {
   async login(@Body() createAuthenticationDto: CreateAuthenticationDto) {
     return  await this.authenticationService.getAuthenticatedUser(createAuthenticationDto.email, createAuthenticationDto.password);
   }
+  
+  async logout() {
+    return [];
+  }
 
   @Get('refreshToken')
   async refreshToken(@Req() request) {
