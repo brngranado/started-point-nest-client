@@ -20,6 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/jwt": "^10.1.0",
@@ -31,6 +32,8 @@
     "amqp-connection-manager": "^4.1.13",
     "amqplib": "^0.10.3",
     "bcryptjs": "^2.4.3",
+    "g": "^2.0.1",
+    "npm": "^10.1.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "reflect-metadata": "^0.1.13",
